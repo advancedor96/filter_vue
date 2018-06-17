@@ -1,28 +1,55 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <Title />
+    <div class="second">
+      <Aside />
+      <Content />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  // import HelloWorld from './components/HelloWorld.vue'
+  import Title from './components/Title.vue'
+  import Aside from './components/Aside.vue'
+  import Content from './components/Content.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    name: 'app',
+    components: {
+      Title,
+      Aside,
+      Content
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', serif;
+
+  }
+
+  * {
+    box-sizing: border-box;
+    position: relative;
+    // border: 1px solid black;
+  }
+  #app{
+    width: 100%;
+    height: 100%;
+    background-color: #F2F2F2;
+  }
+  .second{
+    display: flex;
+  }
 </style>
