@@ -17,7 +17,17 @@ export default {
 <style  lang="scss">
 $c-purple: #7828B4;
 $c-lightPurple: #9013FE;
-
+@media only screen and (max-width: 414px){
+	.Title{
+		flex-wrap: wrap;
+		.logo{
+			width: 100% !important;
+		}
+		.search{
+			width: 100%;
+		}
+	}
+}
 .Title{
    width: 100%;
    display: inline-flex;
@@ -25,6 +35,7 @@ $c-lightPurple: #9013FE;
    height: 92px;
 	background-color: $c-purple;
 	overflow: hidden;
+	text-align: center;
    .logo{
       color: white;
       width: 157px;
@@ -43,7 +54,13 @@ $c-lightPurple: #9013FE;
          padding-bottom: 5px;
          font-size: 24px;
          width: 360px;
-      }
+		}
+		::placeholder{
+			font-size: 20px;
+			color: white;
+			opacity: 0.5;
+			font-style: italic;
+		}
       i{
          &.fa-search{
             font-size: 20px;

@@ -100,7 +100,7 @@
 	// Mobile
 	@media only screen and (max-width:414px) {
 		.el-aside {
-			display: none !important;
+			// display: none !important;
 		}
 		.el-card {
 

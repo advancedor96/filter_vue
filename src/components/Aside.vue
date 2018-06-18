@@ -55,7 +55,8 @@
          font-size: 16px;
 
          .el-input{
-            width: 220px;
+				min-width: 169px;
+				width: 100%;
             height: 40px;
          }
          .el-checkbox{
@@ -73,6 +74,7 @@
       }
       .Date{
          .from, .to{
+				width: 100%;
             display: flex;
             align-items: center;
             justify-content: flex-end;

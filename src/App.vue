@@ -6,17 +6,17 @@
 				<Title />
 			</el-header>
 
-			<el-container>
+			<el-container class="toggleRowAndCol">
 
-				<el-aside class="hidden-xs-only" width="300px" style="">
+				<el-aside  style="">
 					<Aside />
 				</el-aside>
 				<el-main style="">
 					<Content />
 				</el-main>
 			</el-container>
-			<el-footer style="background: green">
-				footer
+			<el-footer style="">
+				
 			</el-footer>
 
 		</el-container>
@@ -52,6 +52,7 @@
 		width: 100%;
 		height: 100%;
 		font-family: 'Roboto', serif;
+		min-width: 360px;
 
 	}
 
@@ -84,8 +85,13 @@
 	}
 	// Mobile
 	@media only screen and (max-width:414px) {
+		.toggleRowAndCol{
+			flex-direction: column;
+		}
 		.el-aside {
-			display: none !important;
+			width: 100% !important;
+			max-width: none;
+			margin: 0;
 		}
 		.el-main{
 			min-width: 250px !important;
