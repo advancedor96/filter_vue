@@ -27,14 +27,13 @@
 						<span class="author">Ethan Foster</span>
 						<span class="category">Entertainment</span>
 					</div>
-					<div class="fourth_line">
-						<span class="place">
-							<i class="fas fa-map-marker-alt"></i>
-							高雄市</span>
-						<span class="date">
-							<i class="far fa-calendar-alt"></i>
-							時間</span>
-					</div>
+					<span class="place">
+						<i class="fas fa-map-marker-alt"></i>
+						高雄市</span>
+					<span class="date">
+						<i class="far fa-calendar-alt"></i>
+						時間</span>
+
 				</div>
 			</el-card>
 
@@ -71,6 +70,63 @@
 </script>
 
 <style lang="scss">
+	// Pad
+	@media only screen and (min-width: 414px) and (max-width: 900px) {
+		.el-card {
+
+			width: 388px !important;
+			height: 414px !important;
+			.el-card__body {
+				flex-direction: column !important;
+			}
+			.image {
+				width: 100% !important;
+				height: 196px !important;
+			}
+			.card_content {
+				width: 100% !important;
+				display: flex !important;
+				flex-direction: column !important;
+				.description{
+					height: 45px !important;
+				}
+				.date {
+					margin-top: 16px !important;
+				}
+			}
+		}
+	}
+
+	// Mobile
+	@media only screen and (max-width:414px) {
+		.el-aside {
+			display: none !important;
+		}
+		.el-card {
+
+			// width: 388px !important;
+			height: 414px !important;
+			.el-card__body {
+				flex-direction: column !important;
+			}
+			.image {
+				width: 100% !important;
+				height: 196px !important;
+			}
+			.card_content {
+				width: 100% !important;
+				display: flex !important;
+				flex-direction: column !important;
+				.description{
+					height: 45px !important;
+				}
+				.date {
+					margin-top: 16px !important;
+				}
+			}
+		}
+	}
+
 	.Content {
 		background-color: #F2F2F2;
 		display: inline-block;
@@ -85,7 +141,7 @@
 			margin-bottom: 8px;
 
 		}
-		.tags{
+		.tags {
 			margin-bottom: 24px;
 		}
 
@@ -128,23 +184,31 @@
 					padding: 0 15px;
 				}
 			}
-			.fourth_line {
-				margin-top: 16px;
-				display: flex;
-				.place {}
-				.date {}
-			}
-		}
-		.image {
-			min-width: 220px;
-			height: 220px;
-			background: url('http://element.eleme.io/static/hamburger.50e4091.png');
-			display: inline-block;
-		}
-		.card_content {
-			padding: 24px 20px;
-			width: 560px;
 
+
+			.place,
+			.date {
+				color: #9B9B9B;
+				display: inline-block;
+			}
+			.place {
+				margin-top: 16px;
+				margin-right: 20px;
+			}
+
+			.image {
+				min-width: 220px;
+				height: 220px;
+				background: url('http://element.eleme.io/static/hamburger.50e4091.png');
+				background-size: cover;
+				background-position: center center;
+				display: inline-block;
+			}
+			.card_content {
+				padding: 24px 20px;
+				width: 560px;
+
+			}
 		}
 	}
 </style>

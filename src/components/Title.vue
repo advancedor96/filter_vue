@@ -23,7 +23,8 @@ $c-lightPurple: #9013FE;
    display: inline-flex;
    align-items: center;
    height: 92px;
-   background-color: $c-purple;
+	background-color: $c-purple;
+	overflow: hidden;
    .logo{
       color: white;
       width: 157px;

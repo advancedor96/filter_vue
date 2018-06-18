@@ -1,6 +1,5 @@
 <template>
 	<div id="app">
-		<!-- <Test /> -->
 		<!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 		<el-container>
 			<el-header height="92px">
@@ -19,10 +18,7 @@
 			<el-footer style="background: green">
 				footer
 			</el-footer>
-			<!-- <div class="second">
-				<Aside />
-				<Content />
-			</div> -->
+
 		</el-container>
 	</div>
 </template>
@@ -72,8 +68,31 @@
 
 	.el-header {
 		padding: 0;
+
 	}
-	.el-main{
+
+	.el-aside {
+		max-width: 300px;
+		margin-left: 38px;
+	} 
+	// Pad
+	@media only screen and (max-width:900px) and (min-width:414px) {
+		.el-aside {
+			max-width: 300px !important;
+			margin-left: 0 !important;
+		}
+	}
+	// Mobile
+	@media only screen and (max-width:414px) {
+		.el-aside {
+			display: none !important;
+		}
+		.el-main{
+			min-width: 250px !important;
+		}
+	}
+
+	.el-main {
 		padding: 0;
 		max-width: 820px;
 		min-width: 468px;
