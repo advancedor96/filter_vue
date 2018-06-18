@@ -34,7 +34,6 @@
 
 <style lang="scss">
    .Aside {
-      margin-left: 38px;
       background-color: #ebebeb;
       max-width: 300px;
       padding: 0 40px;
